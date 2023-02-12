@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col">
+    {% if animal_list %}
+        {% for animal in animal_list %}
+        <ul>
+            <li>{{animal.nombre}}</li>
+            <p>{{animal.descripcion}}</p>
+        </ul>
+        {% endfor %}
+    {% else %}
+        <p>Aun no hay animales agregados</p>
+    {% endif%}
+</div>
+{% endblock %}
